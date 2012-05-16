@@ -30,12 +30,7 @@ if g:vimclojure#HighlightBuiltins != 0
 		\ "Boolean":   "true false",
 		\ "Cond":      "if if-not if-let when when-not when-let "
 		\            . "when-first cond condp case",
-<<<<<<< HEAD
 		\ "Exception": "try catch finally throw",
-=======
-		\ "Exception": "try catch finally throw "
-		\            . "try+ throw+ ",
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 		\ "Repeat":    "recur map mapcat reduce filter for doseq dorun "
 		\            . "doall dotimes map-indexed keep keep-indexed",
 		\ "Special":   ". def do fn if let new quote var loop",
@@ -48,7 +43,6 @@ if g:vimclojure#HighlightBuiltins != 0
 		\            . "*print-level* *use-context-classloader* "
 		\            . "*source-path* *clojure-version* *read-eval* "
 		\            . "*fn-loader* *1 *2 *3 *e",
-<<<<<<< HEAD
 		\ "Define":    "def- defn defn- defmacro defmulti defmethod "
 		\            . "defstruct defonce declare definline definterface "
 		\            . "defprotocol defrecord deftype",
@@ -59,25 +53,6 @@ if g:vimclojure#HighlightBuiltins != 0
 		\            . "refer-clojure future lazy-seq letfn "
 		\            . "with-loading-context bound-fn extend extend-protocol "
 		\            . "extend-type reify with-bindings ->>",
-=======
-		\ "Define":    "def- defmulti defmethod "
-		\            . "defstruct defonce declare definline definterface "
-		\            . "defprotocol defrecord deftype "
-		\            . "definst defsynth "
-		\            . "defsketch "
-		\            . "defspec "
-		\            . "defgauge defmeter defhistogram defcounter deftimer "
-		\            . "defremote defmigration defform defform- defrule "
-		\            . "defpartial defroutes defparser defpage deftest defparsertest defentity defdb defproject ",
-		\ "Macro":     "and or -> assert with-out-str with-in-str with-open "
-		\            . "locking destructure ns dosync binding delay "
-		\            . "lazy-cons lazy-cat time assert doc with-precision "
-		\            . "with-local-vars .. doto memfn proxy amap areduce "
-		\            . "refer-clojure future lazy-seq letfn "
-		\            . "with-loading-context bound-fn extend extend-protocol "
-		\            . "extend-type reify with-bindings ->> "
-		\            . "let->> >> match ",
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 		\ "Func":      "= not= not nil? false? true? complement identical? "
 		\            . "string? symbol? map? seq? vector? keyword? var? "
 		\            . "special-symbol? apply partial comp constantly "
@@ -86,11 +61,7 @@ if g:vimclojure#HighlightBuiltins != 0
 		\            . "println pr-str prn-str print-str println-str newline "
 		\            . "macroexpand macroexpand-1 monitor-enter monitor-exit "
 		\            . "eval find-doc file-seq flush hash load load-file "
-<<<<<<< HEAD
 		\            . "read read-line scan slurp subs sync test "
-=======
-		\            . "print-doc read read-line scan slurp subs sync test "
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 		\            . "format printf loaded-libs use require load-reader "
 		\            . "load-string + - * / +' -' *' /' < <= == >= > dec dec' "
 		\            . "inc inc' min max "
@@ -142,11 +113,7 @@ if g:vimclojure#HighlightBuiltins != 0
 		\            . "proxy-super rationalize read-string remove "
 		\            . "remove-watch replace resultset-seq rsubseq "
 		\            . "seque set-validator! shutdown-agents subseq "
-<<<<<<< HEAD
 		\            . "supers "
-=======
-		\            . "special-form-anchor syntax-symbol-anchor supers "
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 		\            . "unchecked-add unchecked-dec unchecked-divide "
 		\            . "unchecked-inc unchecked-multiply unchecked-negate "
 		\            . "unchecked-subtract underive xml-seq trampoline "
@@ -209,23 +176,13 @@ if g:vimclojure#DynamicHighlighting != 0 && exists("b:vimclojure_namespace")
 	endtry
 endif
 
-<<<<<<< HEAD
 syn cluster clojureAtomCluster   contains=clojureError,clojureFunc,clojureMacro,clojureCond,clojureDefine,clojureRepeat,clojureException,clojureConstant,clojureVariable,clojureSpecial,clojureKeyword,clojureString,clojureCharacter,clojureNumber,clojureBoolean,clojureQuote,clojureUnquote,clojureDispatch,clojurePattern
-=======
-
-
-syn cluster clojureAtomCluster   contains=clojureError,clojureFunc,clojureMacro,clojureCond,clojureDefine,clojureRepeat,clojureException,clojureConstant,clojureVariable,clojureSpecial,clojureKeyword,clojureString,clojureCharacter,clojureNumber,clojureBoolean,clojureQuote,clojureUnquote,clojureDispatch,clojurePattern,clojureDefn
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 syn cluster clojureTopCluster    contains=@clojureAtomCluster,clojureComment,clojureSexp,clojureAnonFn,clojureVector,clojureMap,clojureSet
 
 syn keyword clojureTodo contained FIXME XXX TODO FIXME: XXX: TODO:
 syn match   clojureComment contains=clojureTodo ";.*$"
 
-<<<<<<< HEAD
 syn match   clojureKeyword "\c:\{1,2}[a-z?!\-_+*./=<>#$][a-z0-9?!\-_+*\./=<>#$]*"
-=======
-syn match   clojureKeyword "\c:\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 
 syn region  clojureString start=/L\="/ skip=/\\\\\|\\"/ end=/"/
 
@@ -254,10 +211,6 @@ syn match   clojureNumber "\<-\=[0-9]\+/[0-9]\+\>"
 syn match   clojureQuote "\('\|`\)"
 syn match   clojureUnquote "\(\~@\|\~\)"
 syn match   clojureDispatch "\(#^\|#'\)"
-<<<<<<< HEAD
-=======
-syn match   clojureDispatch "\^"
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 
 syn match   clojureAnonArg contained "%\(\d\|&\)\?"
 syn match   clojureVarArg contained "&"
@@ -291,27 +244,12 @@ syn match   clojureComment "comment"
 syn region  clojureComment start="#!" end="\n"
 syn match   clojureComment "#_"
 
-<<<<<<< HEAD
-=======
-syn match clojureDefn         "\vdefn-?"   containedin=clojureSexpLevel0 contained nextgroup=clojureFunctionMeta,clojureFunctionName skipwhite skipempty
-syn match clojureDefMacro     "\vdefmacro" containedin=clojureSexpLevel0 contained nextgroup=clojureMacroName                        skipwhite skipempty
-
-syn match clojureFunctionMeta "\v\^"     contained nextgroup=clojureMetaMap
-syn region clojureMetaMap     matchgroup=clojureParen0 start="{"  matchgroup=clojureParen0 end="}"  contains=@clojureTopCluster,clojureSexpLevel0 nextgroup=clojureFunctionName skipwhite skipempty
-
-syn match clojureFunctionName "\v[^ 	^]\S*" contained nextgroup=clojureDocstring skipwhite skipempty
-syn match clojureMacroName    "\v[^ 	^]\S*" contained nextgroup=clojureDocstring skipwhite skipempty
-
-syn region clojureDocstring start=/L\="/ skip=/\\\\\|\\"/ end=/"/ contained
-
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 syn sync fromstart
 
 if version >= 600
 	command -nargs=+ HiLink highlight default link <args>
 else
 	command -nargs=+ HiLink highlight         link <args>
-<<<<<<< HEAD
 endif
 
 HiLink clojureConstant  Constant
@@ -412,114 +350,6 @@ else
 	HiLink clojureParen9 clojureParen0
 endif
 
-=======
-endif
-
-HiLink clojureConstant  Constant
-HiLink clojureBoolean   Boolean
-HiLink clojureCharacter Character
-HiLink clojureKeyword   Operator
-HiLink clojureNumber    Number
-HiLink clojureString    String
-HiLink clojurePattern   Constant
-HiLink clojureDocstring Comment
-
-HiLink clojureFunctionName Function
-HiLink clojureMacroName    Macro
-
-HiLink clojureVariable  Identifier
-HiLink clojureCond      Conditional
-HiLink clojureDefine    Define
-HiLink clojureDefn      Define
-HiLink clojureDefMacro  Define
-HiLink clojureException Exception
-HiLink clojureFunc      Function
-HiLink clojureMacro     Macro
-HiLink clojureRepeat    Repeat
-
-HiLink clojureQuote     Special
-HiLink clojureUnquote   Special
-HiLink clojureDispatch  Special
-HiLink clojureAnonArg   Special
-HiLink clojureVarArg    Special
-HiLink clojureSpecial   Special
-
-HiLink clojureComment   Comment
-HiLink clojureTodo      Todo
-
-HiLink clojureError     Error
-
-HiLink clojureParen0    Delimiter
-
-if !exists("g:vimclojure#ParenRainbowColorsDark")
-	if exists("g:vimclojure#ParenRainbowColors")
-		let g:vimclojure#ParenRainbowColorsDark =
-					\ g:vimclojure#ParenRainbowColors
-	else
-		let g:vimclojure#ParenRainbowColorsDark = {
-					\ '1': 'ctermfg=yellow      guifg=orange1',
-					\ '2': 'ctermfg=green       guifg=yellow1',
-					\ '3': 'ctermfg=cyan        guifg=greenyellow',
-					\ '4': 'ctermfg=magenta     guifg=green1',
-					\ '5': 'ctermfg=red         guifg=springgreen1',
-					\ '6': 'ctermfg=yellow      guifg=cyan1',
-					\ '7': 'ctermfg=green       guifg=slateblue1',
-					\ '8': 'ctermfg=cyan        guifg=magenta1',
-					\ '9': 'ctermfg=magenta     guifg=purple1'
-					\ }
-	endif
-endif
-
-if !exists("g:vimclojure#ParenRainbowColorsLight")
-	if exists("g:vimclojure#ParenRainbowColors")
-		let g:vimclojure#ParenRainbowColorsLight =
-					\ g:vimclojure#ParenRainbowColors
-	else
-		let g:vimclojure#ParenRainbowColorsLight = {
-					\ '1': 'ctermfg=darkyellow  guifg=orangered3',
-					\ '2': 'ctermfg=darkgreen   guifg=orange2',
-					\ '3': 'ctermfg=blue        guifg=yellow3',
-					\ '4': 'ctermfg=darkmagenta guifg=olivedrab4',
-					\ '5': 'ctermfg=red         guifg=green4',
-					\ '6': 'ctermfg=darkyellow  guifg=paleturquoise3',
-					\ '7': 'ctermfg=darkgreen   guifg=deepskyblue4',
-					\ '8': 'ctermfg=blue        guifg=darkslateblue',
-					\ '9': 'ctermfg=darkmagenta guifg=darkviolet'
-					\ }
-	endif
-endif
-
-function! VimClojureSetupParenRainbow()
-	if &background == "dark"
-		let colors = g:vimclojure#ParenRainbowColorsDark
-	else
-		let colors = g:vimclojure#ParenRainbowColorsLight
-	endif
-
-	for [level, color] in items(colors)
-		execute "highlight clojureParen" . level . " " . color
-	endfor
-endfunction
-
-if vimclojure#ParenRainbow != 0
-	call VimClojureSetupParenRainbow()
-
-	augroup VimClojureSyntax
-		autocmd ColorScheme * if &ft == "clojure" | call VimClojureSetupParenRainbow() | endif
-	augroup END
-else
-	HiLink clojureParen1 clojureParen0
-	HiLink clojureParen2 clojureParen0
-	HiLink clojureParen3 clojureParen0
-	HiLink clojureParen4 clojureParen0
-	HiLink clojureParen5 clojureParen0
-	HiLink clojureParen6 clojureParen0
-	HiLink clojureParen7 clojureParen0
-	HiLink clojureParen8 clojureParen0
-	HiLink clojureParen9 clojureParen0
-endif
-
->>>>>>> 16fb7b944327bf98673626594d23ac2c149a98cc
 delcommand HiLink
 
 let b:current_syntax = "clojure"
